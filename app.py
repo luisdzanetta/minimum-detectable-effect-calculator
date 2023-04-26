@@ -77,7 +77,6 @@ p.add_layout(LinearAxis(y_range_name=y_column2_range), "right")
 p.vbar(mde_df['Semana do experimento'], 
         mde_df['Amostra por variante'], 
         legend_label="Amostra por variante", 
-        color='blue',
-        line_width=2)
+        color='blue')
 
 st.bokeh_chart(p, use_container_width=True)
