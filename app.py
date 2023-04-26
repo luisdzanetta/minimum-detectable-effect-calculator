@@ -57,6 +57,10 @@ p = figure(title="MDE por semana",
            x_axis_label="Semana", 
            y_axis_label="MDE")
 
+# Remove the grid lines for both the x and y grids
+p.xgrid.grid_line_color = None
+p.ygrid.grid_line_color = None
+
 #First axis
 p.line(mde_df['Semana do experimento'], 
         mde_df['MDE'], 
