@@ -78,6 +78,6 @@ p.line(mde_df['Semana do experimento'],
         mde_df['Amostra por variante'], 
         legend_label="Amostra por variante", 
         color='blue',
-        line_widht=2)
+        line_width=2)
 
 st.bokeh_chart(p, use_container_width=True)
