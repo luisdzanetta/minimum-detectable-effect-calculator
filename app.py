@@ -38,7 +38,7 @@ mde_data = []
 for week in range(1, num_weeks+1):
     total_sample = sample_per_variant * week
     mde = calculate_mde(base_conversion, total_sample)
-    mde_data.append({'Experiment week number': week, 'Total sample per variant': total_sample, 'Sample per variant': sample_per_variant, 'MDE': mde*100})
+    mde_data.append({'Semana do experimento': week, 'Amostra por variante': total_sample, 'MDE': mde*100})
 
 # Convert the list of dictionaries to a Pandas dataframe
 mde_df = pd.DataFrame(mde_data)
@@ -48,6 +48,6 @@ st.write(mde_df)
 
 # Plot the graph
 fig, ax = plt.subplots()
-ax.plot(mde_df['Experiment week number'], mde_df['MDE'])
-ax.set(xlabel='Experiment week number', ylabel='MDE', title='MDE over time')
+ax.plot(mde_df['Semana do experimento'], mde_df['MDE'])
+ax.set(xlabel='Experiment week number', ylabel='MDE', title='MDE por semana')
 st.pyplot(fig)
