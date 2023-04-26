@@ -3,14 +3,32 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 
+#Define a configuração da página
+st.set_page_config(
+    page_title="Calculadora de Mínimo Efeito Detectável",
+    page_icon="https://www.google.com/url?sa=i&url=https%3A%2F%2Flogospng.org%2Flogo-banco-bradesco%2F&psig=AOvVaw3K43MPXg0ebPMPgDe6xJl_&ust=1682620842369000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCOie2ZyZyP4CFQAAAAAdAAAAABAD",
+)
+
+roboto = {"fontname": "Roboto", "size": "11"}
+roboto_light = {"fontname": "Roboto", "size": "10", "weight": "light"}
+roboto_title = {"fontname": "Roboto", "size": "12", "weight": "bold"}
+roboto_small = {"fontname": "Roboto", "size": "7.5", "weight": "light"}
+
+font = {"family": "sans-serif", "sans-serif": "roboto", "size": 11}
+
+plt.rc("font", **font)
+
+
+# Define the inputs using Streamlit widgets
+sample_per_variant = st.number_input("Enter the sample per variant:", value=1000, step=100, min_value=100, max_value=100000)
+base_conversion = st.number_input("Enter the base conversion of the control variant:", value=0.05, step=0.01, min_value=0.01, max_value=1.0)
+num_weeks = st.number_input("Enter the number of weeks:", value=4, step=1, min_value=1, max_value=20)
+
 # Define the MDE function
 def calculate_mde(p, n):
     return math.sqrt((1/p - 1)/(n/16))
 
-# Define the inputs using Streamlit widgets
-num_weeks = st.number_input("Enter the number of weeks:", value=4, step=1, min_value=1, max_value=52)
-sample_per_variant = st.number_input("Enter the sample per variant:", value=1000, step=100, min_value=100, max_value=100000)
-base_conversion = st.number_input("Enter the base conversion of the control variant:", value=0.05, step=0.01, min_value=0.01, max_value=1.0)
+
 
 # Calculate the MDE for each week and store the data in a list of dictionaries
 mde_data = []
