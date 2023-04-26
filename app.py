@@ -63,22 +63,4 @@ p1.line(mde_df['Semana do experimento'],
         color='blue',
         line_width=2)
 
-#Gráfico de linhas Amostra por variante x semana
-p2 = figure(title="Amostra por variante por semana", 
-           x_axis_label="Semana", 
-           y_axis_label="MDE")
-
-p2.vbar(mde_df['Semana do experimento'], 
-        mde_df['Amostra por variante'], 
-        legend_label="Amostra por variante",
-        width=0.5,
-        bottom=0,
-        color="green")
-
 st.bokeh_chart(p1, use_container_width=True)
-st.bokeh_chart(p2, use_container_width=True)
-
-#fig, ax = plt.subplots()
-#ax.plot(mde_df['Semana do experimento'], mde_df['MDE'])
-#ax.set(xlabel='Experiment week number', ylabel='MDE', title='MDE por semana')
-#st.pyplot(fig)
