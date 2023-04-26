@@ -68,10 +68,10 @@ p.y_range = Range1d(mde_df['MDE'].min() * (1 - y_overlimit), mde_df['MDE'].max()
 
 #Second axis
 y_column2_range = 'Semana do experimento' + "_range"
-p.extra_y_ranges = {y_column2_range: Range1d(start=mde_df['Amostra por semana'].min() * (1 - y_overlimit),end=mde_df['Amostra por semana'].max() * (1 + y_overlimit))}
+p.extra_y_ranges = {y_column2_range: Range1d(start=mde_df['Amostra por variante'].min() * (1 - y_overlimit),end=mde_df['Amostra por variante'].max() * (1 + y_overlimit))}
 p.add_layout(LinearAxis(y_range_name=y_column2_range), "right")
 p.vbar(mde_df['Semana do experimento'], 
-        mde_df['Amostra por semana'], 
+        mde_df['Amostra por variante'], 
         legend_label="Amostra por variante", 
         color='blue',
         line_width=2)
