@@ -61,16 +61,12 @@ p.line(mde_df['Semana do experimento'],
         legend_label="MDE (%)", 
         color='blue',
         line_width=2)
+
 p.y_range = Range1d(mde_df['MDE'].min() * (1 - y_overlimit), mde_df['MDE'].max() * (1 + y_overlimit))
 
 #Second axis
 y_column2_range = y_column2 + "_range"
-p.extra_y_ranges = {
-    y_column2_range: Range1d(
-        start=mde_df['Amostra por semana'].min() * (1 - y_overlimit),
-        end=mde_df['Amostra por semana'].max() * (1 + y_overlimit),
-    )
-}
+p.extra_y_ranges = {y_column2_range: Range1d(start=mde_df['Amostra por semana'].min() * (1 - y_overlimit),end=mde_df['Amostra por semana'].max() * (1 + y_overlimit))}
 p.add_layout(LinearAxis(y_range_name=y_column2_range), "right")
 p.vbar(mde_df['Semana do experimento'], 
         mde_df['Amostra por semana'], 
