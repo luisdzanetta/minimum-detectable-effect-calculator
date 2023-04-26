@@ -70,7 +70,7 @@ p.line(mde_df['Semana do experimento'],
        #bottom=0,
        #color="green")
 
-st.bokeh_chart(p)
+st.bokeh_chart(p, use_container_width=True)
 
 #fig, ax = plt.subplots()
 #ax.plot(mde_df['Semana do experimento'], mde_df['MDE'])
