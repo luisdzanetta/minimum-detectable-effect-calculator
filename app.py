@@ -44,10 +44,12 @@ for week in range(1, num_weeks+1):
 mde_df = pd.DataFrame(mde_data)
 
 # Display the table
-st.write(mde_df)
+#st.write(mde_df)
+st.dataframe(mde_df, use_container_width=True)
+
 
 # Plot the graph
-st.line_chart(data=mde_df, *, x='Semana do experimento', y='MDE', width=0, height=0, use_container_width=True)
+#st.line_chart(data=mde_df, *, x='Semana do experimento', y='MDE', width=0, height=0, use_container_width=True)
 
 #fig, ax = plt.subplots()
 #ax.plot(mde_df['Semana do experimento'], mde_df['MDE'])
