@@ -69,8 +69,8 @@ p2 = figure(title="Amostra por variante por semana",
            y_axis_label="MDE")
 
 p2.vbar(mde_df['Semana do experimento'], 
-        mde_df['total_sample'], 
-        legend_label="Amostra",
+        mde_df['Amostra por variante'], 
+        legend_label="Amostra por variante",
         width=0.5,
         bottom=0,
         color="green")
