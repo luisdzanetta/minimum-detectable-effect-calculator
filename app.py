@@ -47,7 +47,9 @@ mde_df = pd.DataFrame(mde_data)
 st.write(mde_df)
 
 # Plot the graph
-fig, ax = plt.subplots()
-ax.plot(mde_df['Semana do experimento'], mde_df['MDE'])
-ax.set(xlabel='Experiment week number', ylabel='MDE', title='MDE por semana')
-st.pyplot(fig)
+st.line_chart(data=mde_df, *, x='Semana do experimento', y='MDE', width=0, height=0, use_container_width=True)
+
+#fig, ax = plt.subplots()
+#ax.plot(mde_df['Semana do experimento'], mde_df['MDE'])
+#ax.set(xlabel='Experiment week number', ylabel='MDE', title='MDE por semana')
+#st.pyplot(fig)
