@@ -60,15 +60,15 @@ p = figure(title="MDE por semana",
 # add a line renderer with legend and line thickness
 p.line(mde_df['Semana do experimento'], 
        mde_df['MDE'], 
-       legend_label="MDE", 
+       legend_label="MDE (%)", 
        color='blue',
        line_width=2)
-#p.vbar(cryptodf['Month'], 
-       #cryptodf['Ethereum'], 
-       #legend_label="ETH",
-       #width=0.5,
-       #bottom=0,
-       #color="green")
+p.vbar(mde_df['Semana do experimento'], 
+       mde_df['Amostra por variante'], 
+       legend_label="Amostra",
+       width=0.5,
+       bottom=0,
+       color="green")
 
 st.bokeh_chart(p, use_container_width=True)
 
