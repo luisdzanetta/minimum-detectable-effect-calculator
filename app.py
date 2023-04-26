@@ -53,24 +53,31 @@ st.dataframe(mde_df, use_container_width=True)
 #st.line_chart(data=mde_df, x='Semana do experimento', y='MDE', width=0, height=0, use_container_width=True)
 
 # create a new plot with a title and axis labels
-p = figure(title="MDE por semana", 
+p1 = figure(title="MDE por semana", 
            x_axis_label="Semana", 
            y_axis_label="MDE")
 
 # add a line renderer with legend and line thickness
-p.line(mde_df['Semana do experimento'], 
+p1.line(mde_df['Semana do experimento'], 
        mde_df['MDE'], 
        legend_label="MDE (%)", 
        color='blue',
        line_width=2)
-p.vbar(mde_df['Semana do experimento'], 
+
+
+p2 = figure(title="Amostra por variante por semana", 
+           x_axis_label="Semana", 
+           y_axis_label="MDE")
+
+p2.vbar(mde_df['Semana do experimento'], 
        mde_df['Amostra por variante'], 
        legend_label="Amostra",
        width=0.5,
        bottom=0,
        color="green")
 
-st.bokeh_chart(p, use_container_width=True)
+st.bokeh_chart(p1, use_container_width=True)
+st.bokeh_chart(p2, use_container_width=True)
 
 #fig, ax = plt.subplots()
 #ax.plot(mde_df['Semana do experimento'], mde_df['MDE'])
