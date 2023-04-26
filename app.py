@@ -4,8 +4,11 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 #Define a configuração da página
-st.set_page_config(page_title="Calculadora de Mínimo Efeito Detectável", 
-                   page_icon="https://www.google.com/url?sa=i&url=https%3A%2F%2Flogospng.org%2Flogo-banco-bradesco%2F&psig=AOvVaw3K43MPXg0ebPMPgDe6xJl_&ust=1682620842369000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCOie2ZyZyP4CFQAAAAAdAAAAABAD")
+st.set_page_config(page_title="Calculadora de Mínimo Efeito Detectável",
+                   page_icon="https://www.google.com/url?sa=i&url=https%3A%2F%2Flogospng.org%2Flogo-banco-bradesco%2F&psig=AOvVaw3K43MPXg0ebPMPgDe6xJl_&ust=1682620842369000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCOie2ZyZyP4CFQAAAAAdAAAAABAD",
+                   layout="centered",
+                   initial_sidebar_state="auto",
+                   menu_items=None)
 
 roboto = {"fontname": "Roboto", "size": "11"}
 roboto_light = {"fontname": "Roboto", "size": "10", "weight": "light"}
