@@ -19,6 +19,9 @@ font = {"family": "sans-serif", "sans-serif": "roboto", "size": 11}
 
 plt.rc("font", **font)
 
+#Título e descrição da página
+st.title("Calculadora de Mínimo Efeito Detectável")
+st.write("Este aplicativo calcula o Efeito Mínimo Detectável (MDE) para testes de taxa de conversão com base no nível de significância estatística e poder, número de semanas no experimento, taxa de conversão do controle, tamanho da amostra por semana e número de variantes. Caso você tenha alguma dúvida sobre o cálculo foi feito, visite a página **'Cálculo'**. Para saber mais sobre os conceitos utilizados nesse app, visite a página **'Conceitos e Definições'**.")
 
 # Define the inputs using Streamlit widgets
 sample_per_variant = st.number_input("Amostra por variante por semana:", value=1000, step=100, min_value=100, max_value=1000000)
