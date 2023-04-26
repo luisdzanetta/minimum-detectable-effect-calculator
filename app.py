@@ -49,7 +49,7 @@ st.dataframe(mde_df, use_container_width=True)
 
 
 # Plot the graph
-#st.line_chart(data=mde_df, *, x='Semana do experimento', y='MDE', width=0, height=0, use_container_width=True)
+st.line_chart(data=mde_df['MDE'], x='Semana do experimento', y='MDE', width=0, height=0, use_container_width=True)
 
 #fig, ax = plt.subplots()
 #ax.plot(mde_df['Semana do experimento'], mde_df['MDE'])
