@@ -49,18 +49,33 @@ mde_df = pd.DataFrame(mde_data)
 st.dataframe(mde_df, use_container_width=True)
 
 
-# Plot the graph
-#st.line_chart(data=mde_df, x='Semana do experimento', y='MDE', width=0, height=0, use_container_width=True)
-
 #Gráfico 1 | MDE x semana
-p1 = figure(title="MDE por semana", 
+y_overlimit = 0.05
+p = figure(title="MDE por semana", 
            x_axis_label="Semana", 
            y_axis_label="MDE")
 
-p1.line(mde_df['Semana do experimento'], 
+#First axis
+p.line(mde_df['Semana do experimento'], 
         mde_df['MDE'], 
         legend_label="MDE (%)", 
         color='blue',
         line_width=2)
+p.y_range = Range1d(mde_df['MDE'].min() * (1 - y_overlimit), mde_df['MDE'].max() * (1 + y_overlimit))
 
-st.bokeh_chart(p1, use_container_width=True)
+#Second axis
+y_column2_range = y_column2 + "_range"
+p.extra_y_ranges = {
+    y_column2_range: Range1d(
+        start=mde_df['Amostra por semana'].min() * (1 - y_overlimit),
+        end=mde_df['Amostra por semana'].max() * (1 + y_overlimit),
+    )
+}
+p.add_layout(LinearAxis(y_range_name=y_column2_range), "right")
+p.vbar(mde_df['Semana do experimento'], 
+        mde_df['Amostra por semana'], 
+        legend_label="Amostra por variante", 
+        color='blue',
+        line_width=2)
+
+st.bokeh_chart(p, use_container_width=True)
