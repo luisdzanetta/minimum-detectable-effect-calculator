@@ -20,9 +20,9 @@ plt.rc("font", **font)
 
 
 # Define the inputs using Streamlit widgets
-sample_per_variant = st.number_input("Enter the sample per variant:", value=1000, step=100, min_value=100, max_value=100000)
-base_conversion = st.number_input("Enter the base conversion of the control variant:", value=0.05, step=0.01, min_value=0.01, max_value=1.0)
-num_weeks = st.number_input("Enter the number of weeks:", value=4, step=1, min_value=1, max_value=20)
+sample_per_variant = st.number_input("Amostra por variante por semana:", value=1000, step=100, min_value=100, max_value=1000000)
+base_conversion = st.number_input("Conversão do controle:", value=0.05, step=0.01, min_value=0.01, max_value=1.0)
+num_weeks = st.slider("Número de semanas do experimento", value=4, step=1, min_value=1, max_value=20)
 
 # Define the MDE function
 def calculate_mde(p, n):
