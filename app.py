@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 from bokeh.plotting import figure
+from bokeh.models.ranges import Range1d
+from bokeh.models import LinearAxis
 
 #Define a configuração da página
 st.set_page_config(page_title="Calculadora de Mínimo Efeito Detectável",
@@ -65,7 +67,7 @@ p.line(mde_df['Semana do experimento'],
 p.y_range = Range1d(mde_df['MDE'].min() * (1 - y_overlimit), mde_df['MDE'].max() * (1 + y_overlimit))
 
 #Second axis
-y_column2_range = y_column2 + "_range"
+y_column2_range = 'Semana do experimento' + "_range"
 p.extra_y_ranges = {y_column2_range: Range1d(start=mde_df['Amostra por semana'].min() * (1 - y_overlimit),end=mde_df['Amostra por semana'].max() * (1 + y_overlimit))}
 p.add_layout(LinearAxis(y_range_name=y_column2_range), "right")
 p.vbar(mde_df['Semana do experimento'], 
