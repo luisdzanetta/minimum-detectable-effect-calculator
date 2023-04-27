@@ -13,4 +13,7 @@ st.write("**n:** É a amostra por variante, considerando distribuição proporci
 
 st.write("**A equação apresentada anteriormente é um derivação da seguinte equação:**")
 st.latex(r'''n = \frac{16 \sigma^2}{\Delta}''')
+st.write("**Onde:**")
+st.write("**σ:** É a variância, adaptada para distribuição de Bernoulli")
+st.write("**Δ:** É a amostra por variante, considerando distribuição proporcional")
         
