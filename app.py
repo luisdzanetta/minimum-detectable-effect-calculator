@@ -79,7 +79,7 @@ sample_bar = p.vbar(mde_df['Semana do experimento'],
                     top=mde_df['Amostra por variante'], 
                     legend_label="Amostra por variante",
                     width=0.8,
-                    alpha=0.4,
+                    alpha=0.3,
                     color='silver',
                     y_range_name=y_column2_range)
 
@@ -87,7 +87,7 @@ sample_bar = p.vbar(mde_df['Semana do experimento'],
 mde_line = p.line(mde_df['Semana do experimento'], 
                   mde_df['MDE'], 
                   legend_label="MDE (%)", 
-                  color='crimson',
+                  color='lightcoral',
                   line_width=3)
 
 
