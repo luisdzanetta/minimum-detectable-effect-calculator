@@ -45,21 +45,10 @@ mde_data = []
 for week in range(1, num_weeks+1):
     total_sample = sample_per_variant * week
     mde = calculate_mde(base_conversion, total_sample)
-    mde_data.append({'Semana do experimento': week, 'Amostra por variante': total_sample, 'MDE': round(mde*100, 2)})
+    mde_data.append({'Semana do experimento': week, 'Amostra por variante': total_sample, 'MDE (%)': round(mde*100, 2)})
 
 #Converte a lista em um dataframe
 mde_df = pd.DataFrame(mde_data)
-
-# CSS to inject contained in a string
-hide_table_row_index = """
-            <style>
-            thead tr th:first-child {display:none}
-            tbody th {display:none}
-            </style>
-            """
-
-# Inject CSS with Markdown
-st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
 #Mostra a tabela
 #st.write(mde_df)
