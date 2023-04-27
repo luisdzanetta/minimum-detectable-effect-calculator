@@ -7,6 +7,9 @@ st.write("O **MDE**, é o tamanho mínimo da diferença entre as taxas de conver
 st.write("**Equação para cálculo do MDE**")
 st.write("A equação do Mínimo Tamanho Detectável do Efeito (MDE) é:")
 st.latex(r'''\text{MDE} = \sqrt{\frac{1}{p-1} \div \frac{n}{16}}''')
+st.write("**Onde:**")
+st.write("**p:**É a conversão base do controle")
+st.write("**n:**É a amostra por variante, considerando distribuição proporcional")
 
 st.write("**A equação apresentada anteriormente é um derivação da seguinte equação:**")
 st.latex(r'''n = \frac{16 \sigma^2}{\Delta}''')
