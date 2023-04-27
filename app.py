@@ -48,6 +48,9 @@ for week in range(1, num_weeks+1):
     mde = calculate_mde(base_conversion, total_sample)
     mde_data.append({'Semana do experimento': week, 'Amostra por variante': total_sample, 'MDE': round(mde*100, 2)})
 
+#Using hide Index
+df.style.hide_index()
+
 #Converte a lista em um dataframe
 mde_df = pd.DataFrame(mde_data)
 
