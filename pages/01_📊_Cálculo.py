@@ -17,6 +17,6 @@ st.write("**Onde:**")
 st.write("**σ:** É a variância, adaptada para distribuição de Bernoulli")
 st.write("**Δ:** É a amostra por variante, considerando distribuição proporcional")
 
-st.write("**Referência:**"")
+st.write("**Referência:**")
 st.image("https://link.springer.com/article/10.1007/s10618-008-0114-1")
         
