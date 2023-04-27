@@ -50,34 +50,48 @@ mde_df = pd.DataFrame(mde_data)
 #st.write(mde_df)
 st.dataframe(mde_df, use_container_width=True)
 
-
 #Gráfico 1 | MDE x semana
 y_overlimit = 0.05
-p = figure(title="MDE por semana", 
-           x_axis_label="Semana", 
-           y_axis_label="MDE")
+p = figure(title="Efeito Mínimo Detectável (MDE) por Semana", 
+           x_axis_label="Semana do Experimento", 
+           y_axis_label="MDE (%)",
+           plot_width=600,
+           plot_height=400)
 
-# Remove the grid lines for both the x and y grids
-p.xgrid.grid_line_color = None
-p.ygrid.grid_line_color = None
+# Add grid lines for both the x and y grids
+p.xgrid.grid_line_color = 'whitesmoke'
+p.ygrid.grid_line_color = 'whitesmoke'
 
-#First axis
-p.line(mde_df['Semana do experimento'], 
-        mde_df['MDE'], 
-        legend_label="MDE (%)", 
-        color='blue',
-        line_width=2)
+
+#Second axis (Amostra por variante. Ordem invertida para ajustar elemtnos do gráfico)
+y_column2_range = 'Semana do experimento' + "_range"
+p.extra_y_ranges = {y_column2_range: Range1d(start=mde_df['Amostra por variante'].min() * (1 - y_overlimit),end=mde_df['Amostra por variante'].max() * (1 + y_overlimit))}
+p.add_layout(LinearAxis(y_range_name=y_column2_range, axis_label="Amostra por Variante"), "right")
+sample_bar = p.vbar(mde_df['Semana do experimento'], 
+                    top=mde_df['Amostra por variante'], 
+                    legend_label="Amostra por variante",
+                    width=0.8,
+                    alpha=0.4,
+                    color='silver',
+                    y_range_name=y_column2_range)
+
+#Fist axis (MDE. Ordem invertida para ajustar elemtnos do gráfico)
+mde_line = p.line(mde_df['Semana do experimento'], 
+                  mde_df['MDE'], 
+                  legend_label="MDE (%)", 
+                  color='mediumvioletred',
+                  line_width=3)
 
 p.y_range = Range1d(mde_df['MDE'].min() * (1 - y_overlimit), mde_df['MDE'].max() * (1 + y_overlimit))
 
-#Second axis
-y_column2_range = 'Semana do experimento' + "_range"
-p.extra_y_ranges = {y_column2_range: Range1d(start=mde_df['Amostra por variante'].min() * (1 - y_overlimit),end=mde_df['Amostra por variante'].max() * (1 + y_overlimit))}
-p.add_layout(LinearAxis(y_range_name=y_column2_range), "right")
-p.line(mde_df['Semana do experimento'], 
-        mde_df['Amostra por variante'], 
-        legend_label="Amostra por variante", 
-        color='blue',
-        line_width=2)
+# Increase the font size of axis labels and legend labels
+p.xaxis.axis_label_text_font_size = "14pt"
+p.yaxis.axis_label_text_font_size = "14pt"
+p.legend.label_text_font_size = "12pt"
+
+# Add padding to the plot to make room for the legend
+p.legend.location = "top_left"
+p.legend.spacing = 10
+p.legend.padding = 5
 
 st.bokeh_chart(p, use_container_width=True)
