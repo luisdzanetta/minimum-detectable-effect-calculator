@@ -45,7 +45,7 @@ mde_data = []
 for week in range(1, num_weeks+1):
     total_sample = sample_per_variant * week
     mde = calculate_mde(base_conversion, total_sample)
-    mde_data.append({'Semana do experimento': week, 'Amostra por variante': total_sample, 'MDE (%)': round(mde*100, 2)})
+    mde_data.append({'Semana do experimento': week, 'Amostra por variante': total_sample, 'MDE': round(mde*100, 2)})
 
 #Converte a lista em um dataframe
 mde_df = pd.DataFrame(mde_data)
