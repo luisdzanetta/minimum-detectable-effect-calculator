@@ -40,7 +40,6 @@ num_weeks = st.slider("Número de semanas do experimento", value=4, step=1, min_
 def calculate_mde(p, n):
     return math.sqrt((1/p - 1)/(n/16))
 
-
 #Calcula o MDE para cada semana e armazena em uma lista
 mde_data = []
 for week in range(1, num_weeks+1):
@@ -48,11 +47,19 @@ for week in range(1, num_weeks+1):
     mde = calculate_mde(base_conversion, total_sample)
     mde_data.append({'Semana do experimento': week, 'Amostra por variante': total_sample, 'MDE': round(mde*100, 2)})
 
-#Using hide Index
-df.style.hide_index()
-
 #Converte a lista em um dataframe
 mde_df = pd.DataFrame(mde_data)
+
+# CSS to inject contained in a string
+hide_table_row_index = """
+            <style>
+            thead tr th:first-child {display:none}
+            tbody th {display:none}
+            </style>
+            """
+
+# Inject CSS with Markdown
+st.markdown(hide_table_row_index, unsafe_allow_html=True)
 
 #Mostra a tabela
 #st.write(mde_df)
