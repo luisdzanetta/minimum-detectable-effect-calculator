@@ -20,7 +20,9 @@ st.write("**Δ:** É a amostra por variante, considerando distribuição proporc
 st.divider()
 
 st.write("**Referência:**")
-st.image("https://www.pontotel.com.br/wp-content/uploads/2022/05/imagem-corporativa.jpg")
+st.divider()
 st.download_button('Baixar o artigo', "https://link.springer.com/content/pdf/10.1007/s10618-008-0114-1.pdf?pdf=button", file_name="Kohav et al. (2009)_Controlled experiments on the web: survey and practical guide")
+st.image("https://raw.githubusercontent.com/luisdzanetta/repo2/main/kohav.png")
+
 
         
