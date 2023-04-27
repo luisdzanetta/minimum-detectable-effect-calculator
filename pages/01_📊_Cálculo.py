@@ -28,8 +28,8 @@ st.image("https://raw.githubusercontent.com/luisdzanetta/repo2/main/kohav.png")
 #Acessar artigo
 #st.write(f'''<a target="_self" href="https://link.springer.com/article/10.1007/s10618-008-0114-1"><button>Acessar artigo</button></a>''', unsafe_allow_html=True)
 
-link = 'Kohav et al., 2009 - Controlled experiments on the web: survey and practical guide (https://link.springer.com/article/10.1007/s10618-008-0114-1)'
-st.markdown(link, unsafe_allow_html=True)
+#link = 'Kohav et al., 2009 - Controlled experiments on the web: survey and practical guide (https://link.springer.com/article/10.1007/s10618-008-0114-1)'
+#st.markdown(link, unsafe_allow_html=True)
 
 #Baixar artigo
 st.download_button('Baixar artigo', "https://link.springer.com/content/pdf/10.1007/s10618-008-0114-1.pdf?pdf=button", file_name="Kohav et al. (2009)_Controlled experiments on the web: survey and practical guide")
