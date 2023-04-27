@@ -21,6 +21,6 @@ st.divider()
 
 st.write("**Referência:**")
 st.image("https://link.springer.com/article/10.1007/s10618-008-0114-1")
-st.download_button('Baixar o artigo', "https://link.springer.com/content/pdf/10.1007/s10618-008-0114-1.pdf?pdf=button")
+st.download_button('Baixar o artigo', "https://link.springer.com/content/pdf/10.1007/s10618-008-0114-1.pdf?pdf=button", file_name="Kohav et al. (2009)_Controlled experiments on the web: survey and practical guide")
 
         
