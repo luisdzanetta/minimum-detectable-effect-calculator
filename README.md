@@ -56,10 +56,19 @@ Este aplicativo calcula o Efeito Mínimo Detectável (MDE) para testes de taxa d
     http://localhost:8501
     ```
 
-## Estrutura do Projeto
+# Contribuindo
+1. Faça um fork do projeto.
+2. Crie uma branch para sua feature (git checkout -b feature/MinhaFeature).
+3. Commit suas mudanças (git commit -m 'Adiciona MinhaFeature').
+4. Push para a branch (git push origin feature/MinhaFeature).
+5. Abra um Pull Request.
 
-```plaintext
-.
-├── app.py
-├── requirements.txt
-└── README.md
+## Licença
+Esse projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
+## Contato
+**Nome:** Luís D`Avoglio Zanetta
+
+**Email:** luis.dzanetta@gmail.com
+
+**GitHub:** luisdzanetta
