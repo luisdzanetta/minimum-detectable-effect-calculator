@@ -55,6 +55,17 @@ Este aplicativo calcula o Efeito Mínimo Detectável (MDE) para testes de taxa d
     ```
     http://localhost:8501
     ```
+## Estrutura do Projeto
+
+```plaintext
+.
+├── .streamlit            # Configurações do Streamlit
+├── pages                 # Páginas adicionais para o Streamlit
+├── README.md             # Documentação do projeto
+├── app.py                # Aplicativo principal
+├── requirements.txt      # Dependências do projeto
+└── LICENSE               # Licença do projeto
+```
 
 # Contribuindo
 1. Faça um fork do projeto.
