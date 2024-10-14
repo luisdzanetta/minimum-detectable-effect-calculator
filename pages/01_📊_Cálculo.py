@@ -21,17 +21,22 @@ st.write("**Onde:**")
 st.write("**σ:** É a variância, adaptada para distribuição de Bernoulli")
 st.write("**Δ:** É a amostra por variante, considerando distribuição proporcional")
 
-st.divider()
-
 st.write("**Referência:**")
-st.image("https://raw.githubusercontent.com/luisdzanetta/repo2/main/kohav.png")
+#st.write("Controlle experiments on the web survey and practical guide")
+#st.write("Ron Kohavi, Roger Longbotham, Dan Sommerfield e Randal M. Henne")
+#st.write("Data Min Knowl Disc (2009) 18:140–181")
+#st.write("DOI 10.1007/s10618-008-0114-1")
+
+
+st.image("https://huggingface.co/spaces/luisdzanetta/minimum-detectable-effect_calculator/docs/kohav.png")
+st.write("Acesso ao artigo:")
+st.write("https://link.springer.com/content/pdf/10.1007/s10618-008-0114-1.pdf?pdf=button")
 #Acessar artigo
 #st.write(f'''<a target="_self" href="https://link.springer.com/article/10.1007/s10618-008-0114-1"><button>Acessar artigo</button></a>''', unsafe_allow_html=True)
-
 #link = 'Kohav et al., 2009 - Controlled experiments on the web: survey and practical guide (https://link.springer.com/article/10.1007/s10618-008-0114-1)'
 #st.markdown(link, unsafe_allow_html=True)
 
 #Baixar artigo
-st.download_button('Baixar artigo', "https://link.springer.com/content/pdf/10.1007/s10618-008-0114-1.pdf?pdf=button", file_name="Kohav et al. (2009)_Controlled experiments on the web: survey and practical guide")
+st.download_button('Baixar artigo', 'https://link.springer.com/content/pdf/10.1007/s10618-008-0114-1.pdf?pdf=button', file_name="Kohav et al. (2009)_Controlled experiments on the web: survey and practical guide")
 
         
