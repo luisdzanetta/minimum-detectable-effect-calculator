@@ -61,11 +61,13 @@ This application calculates the Minimum Detectable Effect (MDE) for conversion r
 ```plaintext
 .
 ├── .streamlit            # Streamlit configurations
+├── .streamlit            # Documents
 ├── pages                 # Additional pages for Streamlit
 ├── README.md             # Project documentation
 ├── app.py                # Main application
 ├── requirements.txt      # Project dependencies
-└── LICENSE               # Project license              # Licença do projeto
+└── LICENSE               # Project license
+
 ```
 
 # Contributing
