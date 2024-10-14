@@ -1,15 +1,15 @@
-# Calculadora de Mínimo Efeito Detectável (MDE)
+# Minimum Detectable Effect (MDE) Calculator
 
-## Descrição
+## Description
 
-Este aplicativo calcula o Efeito Mínimo Detectável (MDE) para testes de taxa de conversão com base no nível de significância estatística e poder, número de semanas no experimento, taxa de conversão do controle, tamanho da amostra por semana e número de variantes. Caso você tenha alguma dúvida sobre como o cálculo foi feito, visite a página **'Cálculo'**. Para saber mais sobre os conceitos utilizados nesse app, visite a página **'Conceitos e Definições'**.
+This application calculates the Minimum Detectable Effect (MDE) for conversion rate tests based on the statistical significance level and power, number of weeks in the experiment, control conversion rate, sample size per week, and number of variants. If you have any questions about how the calculation was made, visit the **'Calculation'** page. To learn more about the concepts used in this app, visit the **'Concepts and Definitions'** page.
 
-## Funcionalidades
+## Features
 
-- **Calculadora de MDE**: Permite calcular o MDE com base em parâmetros específicos.
-- **Visualização Gráfica**: Gera gráficos interativos para visualização do MDE ao longo das semanas.
+- **MDE Calculator**: Allows you to calculate the MDE based on specific parameters.
+- **Graphical Visualization**: Generates interactive charts to visualize the MDE over the weeks.
 
-## Tecnologias Utilizadas
+## Technologies Used
 
 - **Python**
 - **Pandas**
@@ -17,69 +17,74 @@ Este aplicativo calcula o Efeito Mínimo Detectável (MDE) para testes de taxa d
 - **Streamlit**
 - **Bokeh**
 
-## Instalação
+## Installation
 
-1. Clone o repositório:
+1. Clone the repository:
     ```bash
-    git clone https://github.com/seu-usuario/seu-repositorio.git
+    git clone https://github.com/your-username/your-repository.git
     ```
-2. Navegue até o diretório do projeto:
+2. Navigate to the project directory:
     ```bash
-    cd seu-repositorio
+    cd your-repository
     ```
-3. Crie um ambiente virtual:
+3. Create a virtual environment:
     ```bash
     python -m venv venv
     ```
-4. Ative o ambiente virtual:
-    - Para Windows:
+4. Activate the virtual environment:
+    - For Windows:
         ```bash
         venv\Scripts\activate
         ```
-    - Para macOS/Linux:
+    - For macOS/Linux:
         ```bash
         source venv/bin/activate
         ```
-5. Instale as dependências:
+5. Install the dependencies:
     ```bash
     pip install -r requirements.txt
     ```
 
-## Como Usar
+## How to Use
 
-1. Execute o aplicativo:
+1. Run the application:
     ```bash
     streamlit run app.py
     ```
-2. Abra o navegador e navegue até:
+2. Open your browser and navigate to:
     ```
     http://localhost:8501
     ```
-## Estrutura do Projeto
+
+## Project Structure
 
 ```plaintext
 .
-├── .streamlit            # Configurações do Streamlit
-├── pages                 # Páginas adicionais para o Streamlit
-├── README.md             # Documentação do projeto
-├── app.py                # Aplicativo principal
-├── requirements.txt      # Dependências do projeto
-└── LICENSE               # Licença do projeto
+├── .streamlit            # Streamlit configurations
+├── pages                 # Additional pages for Streamlit
+├── README.md             # Project documentation
+├── app.py                # Main application
+├── requirements.txt      # Project dependencies
+└── LICENSE               # Project license              # Licença do projeto
 ```
 
-# Contribuindo
-1. Faça um fork do projeto.
-2. Crie uma branch para sua feature (git checkout -b feature/MinhaFeature).
-3. Commit suas mudanças (git commit -m 'Adiciona MinhaFeature').
-4. Push para a branch (git push origin feature/MinhaFeature).
-5. Abra um Pull Request.
+# Contributing
+Fork the project.
+Create a branch for your feature (git checkout -b feature/MyFeature).
+Commit your changes (git commit -m 'Add MyFeature').
+Push to the branch (git push origin feature/MyFeature).
+Open a Pull Request.
 
-## Licença
-Esse projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
-## Contato
-**Nome:** Luís D`Avoglio Zanetta
+Contact
+**Name:** Luís D`Avoglio Zanetta
 
 **Email:** luis.dzanetta@gmail.com
 
 **GitHub:** luisdzanetta
+
+
+
+
