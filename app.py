@@ -10,7 +10,7 @@ from bokeh.models import LabelSet
 from bokeh.models import ColumnDataSource
 
 #Define a configuração da página (aba do navegador)
-st.set_page_config(page_title="Calculadora de Mínimo Efeito Detectável",
+st.set_page_config(page_title="Calculadora de Efeito Mínimo Detectável",
                    page_icon="https://companieslogo.com/img/orig/BBD-6b19aac5.png?t=1654497020",
                    layout="centered",
                    initial_sidebar_state="auto",
@@ -26,10 +26,10 @@ font = {"family": "sans-serif", "sans-serif": "roboto", "size": 11}
 plt.rc("font", **font)
 
 #Título da página
-st.title("Calculadora de Mínimo Efeito Detectável")
+st.title("Calculadora de Efeito Mínimo Detectável")
 
 #Descrição abaixo do título
-st.write("Este aplicativo calcula o Efeito Mínimo Detectável (MDE) para testes de taxa de conversão com base no nível de significância estatística e poder, número de semanas no experimento, taxa de conversão do controle, tamanho da amostra por semana e número de variantes. Caso você tenha alguma dúvida sobre o cálculo foi feito, visite a página **'Cálculo'**. Para saber mais sobre os conceitos utilizados nesse app, visite a página **'Conceitos e Definições'**.")
+st.write("Este aplicativo calcula o Efeito Mínimo Detectável (MDE) para testes de taxa de conversão com base no número de semanas do experimento, taxa de conversão do controle e tamanho da amostra por semana. Caso você tenha alguma dúvida sobre o cálculo foi feito, visite a página **'Cálculo'**. Para saber mais sobre os conceitos utilizados nesse app, visite a página **'Conceitos e Definições'**.")
 
 #Define os inputs utilizados no Streamlit
 sample_per_variant = st.number_input("Amostra por variante por semana:", value=1000, step=100, min_value=100, max_value=1000000)
