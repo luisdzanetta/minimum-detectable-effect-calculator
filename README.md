@@ -21,7 +21,7 @@ This application calculates the Minimum Detectable Effect (MDE) for conversion r
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/your-repository.git
+    git clone https://github.com/luisdzanetta/minimum-detectable-effect-calculator.git
     ```
 2. Navigate to the project directory:
     ```bash
