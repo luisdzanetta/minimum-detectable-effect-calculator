@@ -80,7 +80,7 @@ Open a Pull Request.
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-Contact
+## Contact
 **Name:** Luís D`Avoglio Zanetta
 
 **Email:** luis.dzanetta@gmail.com
